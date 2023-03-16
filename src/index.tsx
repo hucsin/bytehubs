@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { Route, Link } from "react-router-dom";
 
 import App from "./App";
 
@@ -8,6 +9,7 @@ const root = createRoot(rootElement!);
 
 root.render(
   <StrictMode>
-    <App />
+    <Link to="/app">go</Link>
+    <Route path="/app" Component={App}></Route>
   </StrictMode>
 );
